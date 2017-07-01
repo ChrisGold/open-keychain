@@ -836,6 +836,17 @@
             android:name=".service.KeychainService"
             android:exported="false" />
 
+        <service
+            android:name=".agent.OpenKeyChainSSHService"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="org.connectbot.SSH_AGENT"/>
+            </intent-filter>
+
+        </service>
+
         <!-- label is made to be "Keyserver Sync" since that is the only context in which
         the user will see it-->
         <provider

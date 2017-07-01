@@ -1,5 +1,6 @@
 package org.sufficientlysecure.keychain.agent;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.Messenger;
@@ -13,7 +14,7 @@ import java.security.cert.CertificateException;
  * Created by Karsten on 18.06.2017.
  */
 
-public abstract class SSHAgent implements MessageTypes{
+public abstract class SSHAgent extends Fragment implements MessageTypes{
 
     public void handle(int auth_id, String user, String host, byte[] sessionIdentifier, Messenger replyTo){
         Message message = Message.obtain();
